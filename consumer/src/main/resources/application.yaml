@@ -1,0 +1,25 @@
+server:
+  port: 8010
+
+# ============ eureka client ===========
+eureka:
+  client:
+    # 表示是否将自己注册进eurekaServer,默认为true
+    register-with-eureka: true
+    # 是否从EurekaServer抓取已有的注册信息，默认为true.单节点无所谓，集群必须设置为true才能配合ribbon使用负载均衡
+    fetchRegistry: true
+    service-url:
+      # 本机入住eurekaServer 地址
+      defaultZone: http://localhost:8000/eureka
+
+
+
+spring:
+  application:
+    name: consumer
+  rabbitmq:
+    host: 47.98.240.185 #RabbitMQ的ip地址
+    port: 5672 #端口
+    username: admin #用户名
+    password: admin #密码
+    virtual-host: / #虚拟主机
