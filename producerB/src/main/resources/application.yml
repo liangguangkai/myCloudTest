@@ -23,3 +23,18 @@ spring:
     username: admin #用户名
     password: admin #密码
     virtual-host: / #虚拟主机
+
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 2000
+      circuitBreaker:
+        errorThresholdPercentage: 50 # 触发熔断错误比例阈值，默认值50%
+        sleepWindowInMilliseconds: 10000 # 熔断后休眠时长，默认值5秒
+        requestVolumeThreshold: 2 # 熔断触发最小请求次数，默认值是20
+
+

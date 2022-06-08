@@ -25,7 +25,7 @@ public class FoodController {
     )
     public String getFood(@PathVariable(value = "name") String name) {
         try {
-            Thread.sleep(2000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
