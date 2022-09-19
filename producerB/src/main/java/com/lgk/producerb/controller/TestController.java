@@ -22,4 +22,10 @@ public class TestController {
         return "success";
     }
 
+
+    @GetMapping("/new")
+    public String testNew(){
+        return "new";
+    }
+
 }

@@ -1,0 +1,3 @@
+[submodule "mySpringBoot"]
+	path = mySpringBoot
+	url = https://github.com/liangguangkai/mySpringBoot.git
